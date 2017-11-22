@@ -13,6 +13,7 @@ class Home extends Public_Controller {
 
 	public function __construct() {
     	parent::__construct();
+		$this->load->model('data');
     }
 
     /*
@@ -28,4 +29,36 @@ class Home extends Public_Controller {
         $this->load->template('home', 'home', $data);
     }
 
+	/*
+	*	invokes dashboard page and passes settings
+    */
+
+	public function dashboard() {
+		$data['title'] = '';
+		$data['header_allowed'] = TRUE;
+		$data['header_black'] = TRUE;
+        $this->load->template('dashboard', 'dashboard', $data);
+    }
+
+	/*
+	*	invokes landing page and passes settings
+    */
+
+	public function landing() {
+        $data['title'] = '';
+		$data['header_allowed'] = TRUE;
+		$data['header_black'] = FALSE;
+        $this->load->template('landing', 'landing', $data);
+    }
+
+	/*
+	*	invokes thanks page and passes settings
+    */
+
+	public function thanks() {
+        $data['title'] = '';
+		$data['header_allowed'] = TRUE;
+		$data['header_black'] = TRUE;
+        $this->load->template('thanks', 'thanks', $data);
+    }
 }
