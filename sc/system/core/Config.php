@@ -98,13 +98,16 @@ class CI_Config {
 				{
 					$server_addr = $_SERVER['SERVER_ADDR'];
 				}
+				$base_url = (is_https()) ? 'https' : 'http';
 
-				$base_url = (is_https() ? 'https' : 'http').'://'.$server_addr
-					.substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], basename($_SERVER['SCRIPT_FILENAME'])));
+				// $base_url = (is_https() ? 'https' : 'http').'://'.$server_addr
+				// 	.substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], basename($_SERVER['SCRIPT_FILENAME'])));
+				$base_url .= '://'.$_SERVER['HTTP_HOST']
+					.str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
 			}
 			else
 			{
-				$base_url = 'https://localhost:7888/';
+				$base_url = 'https://cs/';
 			}
 	
 			$this->set_item('base_url', $base_url);
