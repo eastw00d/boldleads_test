@@ -13,13 +13,14 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 	    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
 	    <title>Test</title>
-	    <link href="<?=GLOBAL_DIRECTORY;?>public/css/style.css?v=1" rel="stylesheet" type="text/css" />
-	    <link href="<?=GLOBAL_DIRECTORY;?>public/css/bootstrap.css?v=1" rel="stylesheet" type="text/css" />
-	    <link href="<?=GLOBAL_DIRECTORY;?>public/css/font-awesome.css?v=1" rel="stylesheet" type="text/css" />
-	    <link href="<?=GLOBAL_DIRECTORY;?>public/css/ionicons.css?v=1" rel="stylesheet" type="text/css" />
-	    <link href="<?=GLOBAL_DIRECTORY;?>public/css/plugin/sidebar-menu.css?v=1" rel="stylesheet" type="text/css" />
-	    <link href="<?=GLOBAL_DIRECTORY;?>public/css/plugin/animate.css?v=1" rel="stylesheet" type="text/css" />
-	    <link href="<?=GLOBAL_DIRECTORY;?>public/css/jquery-ui.css?v=1" rel="stylesheet" type="text/css" />
+	    <link href="/css/style.css?v=1" rel="stylesheet" type="text/css" />
+	    <link href="/css/bootstrap.css?v=1" rel="stylesheet" type="text/css" />
+	    <link href="/css/font-awesome.css?v=1" rel="stylesheet" type="text/css" />
+	    <link href="/css/ionicons.css?v=1" rel="stylesheet" type="text/css" />
+	    <link href="/css/plugin/sidebar-menu.css?v=1" rel="stylesheet" type="text/css" />
+	    <link href="/css/plugin/animate.css?v=1" rel="stylesheet" type="text/css" />
+	    <link href="/css/jquery-ui.css?v=1" rel="stylesheet" type="text/css" />
+		<link href="/css/plugin/smoothproducts.css" type="text/css" rel="stylesheet" />
         <?=$css;?>
   	</head>
   	<body>
@@ -33,8 +34,13 @@
 					<div class="nav-menu">
 						<ul class="nav-menu-inner hidden-xs hidden-sm">
 							<li>
-								<a href="<?=GLOBAL_DIRECTORY;?>public/index.php/home/dashboard">
+								<a href="/home/dashboard">
 									Dashboard
+								</a>
+							</li>
+							<li>
+								<a href="/home">
+									Home
 								</a>
 							</li>
 						</ul>
@@ -42,8 +48,13 @@
 					<div class="nav-menu">
 						<ul class="nav-menu-inner hidden-lg hidden-xl hidden-md">
 							<li>
-								<a href="<?=GLOBAL_DIRECTORY;?>public/index.php/home/dashboard">
+								<a href="/home/dashboard">
 									Dashboard
+								</a>
+							</li>
+							<li>
+								<a href="/home">
+									Home
 								</a>
 							</li>
 						</ul>
@@ -70,31 +81,30 @@
 	        </a>
 	    </div>
 		<script type="text/javascript">
-	    	var base_url = "<?=SITEURL;?>/";
-			var global_directory = "<?=GLOBAL_DIRECTORY;?>";
+			var base_url = 'http://localhost:7888/';
 		</script>
-		<script src="<?=GLOBAL_DIRECTORY;?>public/js/jquery.min.js?v=1" type="text/javascript"></script>
-		<script src="<?=GLOBAL_DIRECTORY;?>public/js/jquery.validate.min.js?v=1" type="text/javascript"></script>
-		<script src="<?=GLOBAL_DIRECTORY;?>public/js/additional-methods.min.js?v=1" type="text/javascript"></script>
-		<script src="<?=GLOBAL_DIRECTORY;?>public/js/all.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/jquery.easing.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/jquery-ui.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/bootstrap.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/jquery.fitvids.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/jquery.viewportchecker.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/jquery.stellar.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/wow.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/jquery.colorbox-min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/owl.carousel.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/isotope.pkgd.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/masonry.pkgd.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/imagesloaded.pkgd.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/jquery.fs.tipper.min.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/mediaelement-and-player.min.js?v=1"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/theme.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/sidebar-menu.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/navigation.js?v=1" type="text/javascript"></script>
-	    <script src="<?=GLOBAL_DIRECTORY;?>public/js/plugin/jquery.singlePageNav.js?v=1" type="text/javascript"></script>
+		<script src="/js/jquery.min.js?v=1" type="text/javascript"></script>
+		<script src="/js/jquery.validate.min.js?v=1" type="text/javascript"></script>
+		<script src="/js/additional-methods.min.js?v=1" type="text/javascript"></script>
+		<script src="/js/all.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/jquery.easing.js?v=1" type="text/javascript"></script>
+	    <script src="/js/jquery-ui.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/bootstrap.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/jquery.fitvids.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/jquery.viewportchecker.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/jquery.stellar.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/wow.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/jquery.colorbox-min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/owl.carousel.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/isotope.pkgd.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/masonry.pkgd.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/imagesloaded.pkgd.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/jquery.fs.tipper.min.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/mediaelement-and-player.min.js?v=1"></script>
+	    <script src="/js/theme.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/sidebar-menu.js?v=1" type="text/javascript"></script>
+	    <script src="/js/navigation.js?v=1" type="text/javascript"></script>
+	    <script src="/js/plugin/jquery.singlePageNav.js?v=1" type="text/javascript"></script>
 	    <?= $js; ?>
 	</body>
 </html>

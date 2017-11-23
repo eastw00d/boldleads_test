@@ -83,16 +83,3 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
-
-/* ===================================================================*/
-// CONFIG
-/* ===================================================================*/
-// GLOBAL_DIRECTORY is a path to the public folder in case if project will be moved 
-// into different location
-// slash after and before the name of the folder is absolutely  imporatant
-// if files has been moved to the main root of public html than GLOBAL_DIRECTORY should be set to '/'
-// I would npt suggest to move entire  framework files to the main root  because it will be a mess
-// I'd rather keep them in sc folder for an example, htcaccess file can be routed  to sc intead of index.php  instead
-
-define('GLOBAL_DIRECTORY', '/sc/');
-define('SITEURL','http://localhost:7888' . GLOBAL_DIRECTORY . 'public/index.php');

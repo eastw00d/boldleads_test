@@ -1,1 +1,0 @@
-<link href="<?=GLOBAL_DIRECTORY;?>public/css/video.css" type="text/css" rel="stylesheet" />
