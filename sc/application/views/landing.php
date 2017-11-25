@@ -27,21 +27,23 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-							        <div class="form-group">
-							           	<input type="text" placeholder="Email Address" id="email" name="email" class="form-control validate[required]" />
-							        </div>
-							    </div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<input type="tel" maxlength="10" name="phone" id="phone" value="" placeholder="Phone" class="form-control field validate[required]" >
+								<div class="row">
+									<div class="col-md-4">
+								        <div class="form-group">
+								           	<input type="text" placeholder="Email Address" id="email" name="email" class="form-control validate[required]" />
+								        </div>
+								    </div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input type="tel" maxlength="10" name="phone" id="phone" value="" placeholder="Phone" class="form-control field validate[required]" >
+										</div>
 									</div>
+									<div class="col-md-4">
+								        <div class="form-group">
+								           	<input type="text" placeholder="Home square footage" id="footage" name="footage" class="form-control validate[required]" />
+								        </div>
+								    </div>
 								</div>
-								<div class="col-md-4">
-							        <div class="form-group">
-							           	<input type="text" placeholder="Home square footage" id="footage" name="footage" class="form-control validate[required]" />
-							        </div>
-							    </div>
 								<div class="form-group">
 									<input type="text" name="address" id="address" value="" placeholder="Address" class="form-control field validate[required]">
 						   		</div>
