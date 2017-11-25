@@ -2,7 +2,6 @@ CREATE DATABASE RECORD:
 CREATE DATABASE record CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE CUSTOMER:
-CREATE TABLE `record`.`customer` ( `id` INT(8) NOT NULL AUTO_INCREMENT , `fname` VARCHAR(50) NOT NULL , `lname` VARCHAR(50) NOT NULL , `address` VARCHAR(150) NOT NULL , `state` VARCHAR(2) NOT NULL , `zip` INT(5) NOT NULL , `city` VARCHAR(50) NOT NULL , `phone` VARCHAR(10) NOT NULL , `email` VARCHAR(50) NOT NULL , `footage` VARCHAR(50) NOT NULL , `date_created` DATETIME on update CURRENT_TIMESTAMP NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_spanish_ci;
 
 CREATE TABLE `customer` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
@@ -17,4 +16,15 @@ CREATE TABLE `customer` (
   `footage` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+CREATE TABLE CLIENT:
+
+CREATE TABLE `client` (
+  `client_id` int(8) NOT NULL,
+  `user_name` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `password_hash` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `last_login` datetime NOT NULL,
+  `created` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;

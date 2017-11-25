@@ -1,0 +1,143 @@
+.fa {
+    font-size: 12px !important;
+}
+/* Login Modal */
+.pull-right .close-btn {
+	display: block;
+	color: #0ff;
+	margin-top: -15px;
+    margin-right: -10px;
+}
+
+#login_modal .sign_ip {
+	font-weight: bold !important;
+}
+
+
+#login_modal .alert {
+	padding: 10px;
+	font-size: 14px;
+}
+
+#login_modal a {
+	color: black;
+	text-decoration: none;
+}
+
+#login_modal h1 {
+	font-size: 24px;
+	font-weight: 300;
+	margin: 0;
+    margin-bottom: 20px;
+}
+
+#login_modal h1 .fa {
+	color: black;
+}
+
+#login_modal label {
+	font-size: 18px;
+	font-weight: 300;
+}
+
+#login_modal .form-group input {
+	font-size: 16px;
+}
+
+#login_modal .modal-dialog {
+	width: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+#login_modal .modal-content {
+	padding: 25px;
+	border-radius: 0;
+}
+
+#login_modal #login_button {
+	font-size: 24px;
+	font-weight: 400;
+	padding: 10px 0;
+	text-decoration: none;
+}
+
+#login_modal #login_alert {
+	display: none;
+}
+
+@media (min-width: 720px) {
+	#login_modal .modal-dialog {
+		width: 480px;
+		margin: 20px auto;
+	}
+}
+/* END of Login Modal */
+
+/* REGISTRATION Modal */
+.pull-right .close-btn {
+	display: block;
+	color: #0ff;
+	margin-top: -15px;
+    margin-right: -10px;
+}
+
+#registration_modal .alert {
+	padding: 10px;
+	font-size: 14px;
+}
+
+#registration_modal a {
+	color: black;
+	text-decoration: none;
+}
+
+#registration_modal h1 {
+	font-size: 24px;
+	font-weight: 300;
+	margin: 0;
+    margin-bottom: 20px;
+}
+
+#registration_modal h1 .fa {
+	color: black;
+}
+
+#registration_modal label {
+	font-size: 18px;
+	font-weight: 300;
+}
+
+#registration_modal .form-group input {
+	font-size: 16px;
+}
+
+#registration_modal .modal-dialog {
+	width: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+#registration_modal .modal-content {
+	padding: 25px;
+	border-radius: 0;
+}
+
+#registration_modal #registration_button {
+	font-size: 24px;
+	font-weight: 400;
+	padding: 10px 0;
+	text-decoration: none;
+}
+
+#registration_modal #login_alert {
+	display: none;
+}
+
+@media (min-width: 720px) {
+	#registration_modal .modal-dialog {
+		width: 480px;
+		margin: 20px auto;
+	}
+}
+/* END of REGISTRATION Modal */

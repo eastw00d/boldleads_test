@@ -21,6 +21,7 @@
 	    <link href="/css/plugin/animate.css?v=1" rel="stylesheet" type="text/css" />
 	    <link href="/css/jquery-ui.css?v=1" rel="stylesheet" type="text/css" />
 		<link href="/css/plugin/smoothproducts.css" type="text/css" rel="stylesheet" />
+		<link href="/css/modals.css" type="text/css" rel="stylesheet" />
         <?=$css;?>
   	</head>
   	<body>
@@ -34,28 +35,57 @@
 					<div class="nav-menu">
 						<ul class="nav-menu-inner hidden-xs hidden-sm">
 							<li>
-								<a href="/home/dashboard">
-									Dashboard
-								</a>
-							</li>
-							<li>
 								<a href="/home">
 									Home
 								</a>
 							</li>
+							<?php if (isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id'] > 0) : ?>
+							<li>
+								<a href="/home/dashboard">
+									Dashboard
+								</a>
+							</li>
+							<?php endif; ?>
+							<li>
+								<?php if (isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id'] == 0) : ?>
+									<a id='login' href="javascript:void(0);">
+										Login
+									</a>
+								<?php else: ?>
+									<a id='logout' href="javascript:void(0);">
+										Logout
+									</a>
+								<?php endif; ?>
+							</li>
+
+							
 						</ul>
 					</div>
 					<div class="nav-menu">
 						<ul class="nav-menu-inner hidden-lg hidden-xl hidden-md">
 							<li>
+								<a href="/home">
+									Home
+								</a>
+							</li>
+							<?php if (isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id'] > 0) : ?>
+							<li>
 								<a href="/home/dashboard">
 									Dashboard
 								</a>
 							</li>
+							<?php endif; ?>
 							<li>
-								<a href="/home">
-									Home
-								</a>
+								<?php if (isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id'] == 0) : ?>
+									<a id='login' href="javascript:void(0);">
+										Login
+									</a>
+								<?php else: ?>
+									<a id='logout' href="javascript:void(0);">
+										Logout
+									</a>
+								<?php endif; ?>
+								</li>
 							</li>
 						</ul>
 					</div>
@@ -65,6 +95,66 @@
 
 	        <?= $body; ?>
 
+			<!-- LOGIN MODAL -->
+			<div id="login_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Login Form">
+				<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="row">
+			        		<div class="col-xs-12">      			
+			          			<div class="pull-right"><a href="#" class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fa fa-times fa-close"></i></a></div>
+			          			<h1>Please Log in</h1>
+			          			<form id="login_form" action="" method="post">
+			            			<div class="form-group">
+			              				<label for="login_user_name">Nick Name:</label>
+			              				<input type="text" name="login_user_name" class="form-control" id="login_user_name">
+			            			</div>
+			            			<div class="form-group">
+			              				<label for="login_password">Password:</label>
+			              				<input type="password" name="login_password" class="form-control" id="login_password">
+			            			</div>
+			            			<div class="form-group text-center">
+			              				<button type="button" id="login_button" class="btn btn-lg btn-lblue btn-block">Log in</button>
+			            			</div>
+			            			<div class="form-group text-center">
+			              				Don't have an account? <button type="button" class="btn btn-lblue" id="sign_up">Sign up</button>
+			            			</div>
+			          			</form>
+			        		</div>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			<!-- END OF LOGIN MODAL -->
+			<!-- REGISTRATION MODAL -->
+			<div id="registration_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Registration Form">
+				<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="row">
+			        		<div class="col-xs-12">      			
+			          			<div class="pull-right"><a href="#" class="close-btn" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></a></div>
+			          			<h1></i>Registration</h1>
+			          			<form id="registration_form" action="" method="post">
+			            			<div class="form-group">
+			              				<label for="client_name">Nick Name:</label>
+			              				<input type="text" name="user_name" class="form-control" id="user_name">
+			            			</div>
+			            			<div class="form-group">
+			              				<label for="password">Password:</label>
+			              				<input type="password" name="password" class="form-control" id="password">
+			            			</div>
+			            			<div class="form-group text-center">
+			              				<button type="button" id="registration_button" class="btn btn-lg btn-lblue btn-block">Sign Up</button>
+			            			</div>
+			            			<div class="form-group text-center">
+			              				Have an account? <button type="button" class="btn btn-lblue" id="log_in">Log in</button>
+			            			</div>
+			          			</form>
+			        		</div>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			<!-- END OF REGISTER MODAL -->
 	       	<footer class="footer pt-60">
 				<section class="copyright pb-60">
 					<div class="container">
