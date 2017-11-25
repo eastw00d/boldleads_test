@@ -15,11 +15,11 @@
 				?>
 	            <table class="table checkout table-border">
 	                <tr class="gray-bg">
-	                    <th></th>
-	                    <th class="text-center">Customer</th>
-	                    <th class="text-center">Email</th>
-	                    <th class="text-center">Date Created</th>
-						<th class="text-center">Info</th>
+	                    <th class="text-center table_header"></th>
+	                    <th class="text-center table_header">Customer</th>
+	                    <th class="text-center table_header">Email</th>
+	                    <th class="text-center table_header">Date Created</th>
+						<th class="text-center table_header">Info</th>
 	                </tr>
 					<?php foreach ($records as $k => $v) : ?>
 						<?php $record_number++; ?>
@@ -34,7 +34,7 @@
 							<td class="text-center"><?=$v['date_created'];?></td>
 	                        <td>
 								<a>
-									<i id="show_<?=$record_number;?>"  onClick="show_info(<?=$record_number;?>);" class="fa fa-info"></i>
+									<i id='info' onClick="show_info(<?=$record_number;?>);" class="fa fa-info"></i>
 								</a>
 							</td>
 	                    </tr>
@@ -56,8 +56,9 @@
     	<div class="modal-content">
 			<div class="panel-group checkout" id="accordion in">
 				<div class="panel panel-default">
-					<div class="panel-heading heading-iconed" align="center">
+					<div class="panel-heading heading-iconed" align="center">	
 						<h4 class="panel-title">Customer Information:</h4>
+						<div class="pull-right"><a href="#" class="close-btn_info" data-dismiss="modal" aria-label="Close"><i class="fa fa-times fa-close"></i></a></div>
 					</div>
 					<form name="customer_info">
 						<div id="collapseOne" class="panel-collapse">
@@ -69,21 +70,23 @@
 										 </div>
 									</div>
 								</div>
-								<div class="col-md-4">
-							        <div class="form-group">Email:
-							           	<input type="text" id="email_address" name="email_address" class="form-control field"/>
-							        </div>
-							    </div>
-								<div class="col-md-4">
-									<div class="form-group">Phone:
-										<input type="text" name="phone_number" id="phone_number" class="form-control field">
+								<div class="row">
+									<div class="col-md-4">
+								        <div class="form-group">Email:
+								           	<input type="text" id="email_address" name="email_address" class="form-control field"/>
+								        </div>
+								    </div>
+									<div class="col-md-4">
+										<div class="form-group">Phone:
+											<input type="text" name="phone_number" id="phone_number" class="form-control field">
+										</div>
 									</div>
+									<div class="col-md-4">
+								        <div class="form-group">Footage:
+								           	<input type="text" id="square_footage" name="square_footage" class="form-control field"/>
+								        </div>
+								    </div>
 								</div>
-								<div class="col-md-4">
-							        <div class="form-group">Footage:
-							           	<input type="text" id="square_footage" name="square_footage" class="form-control field"/>
-							        </div>
-							    </div>
 								<div class="form-group">Address:
 									<input type="text" name="mailing_address" id="mailing_address" class="form-control field">
 						   		</div>

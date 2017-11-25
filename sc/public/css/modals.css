@@ -1,3 +1,31 @@
+/*Dashboard CSS*/
+tr:nth-child(even) {
+	background: #CCC
+}
+
+tr:nth-child(odd) {
+	background: #FFF
+}
+
+.table .table_header {
+	background: #0ff;
+}
+
+#info {
+    font-size: 21px !important;
+}
+
+/*INFO Modal*/
+#info_modal .pull-right .close-btn_info {
+	display: block;
+	margin-top: -34px;
+    margin-right: -6px;
+}
+
+#info_modal .fa {
+	color: black;
+}
+
 .fa {
     font-size: 12px !important;
 }
