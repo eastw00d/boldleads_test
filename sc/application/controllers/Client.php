@@ -34,7 +34,6 @@ class Client extends Public_Controller {
 				$data = [
 					'user_name' => $post['user_name'],
 					'password_hash' => password_hash($post['password'], PASSWORD_DEFAULT),
-					// 'last_login' => date('Y-m-d H:i:s'),
 					'created' => date('Y-m-d H:i:s')
 				];
 				// store data into client table
@@ -102,6 +101,8 @@ class Client extends Public_Controller {
 	            $_SESSION['user']['user_name'] = $user_name;
 				
 				// update last login field in client table
+				$this->client_data->update_last_login($user_id);
+
 				$result = TRUE;
 			} else {
 				$result = FALSE;
