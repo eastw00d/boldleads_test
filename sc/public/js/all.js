@@ -216,6 +216,23 @@ $(document).ready(function() {
         e.preventDefault();
 		$('#login_modal').modal('show');	
 	});
+
+	// calls logout functionality of client controller
+	$('#logout').click(function(e) {
+        e.preventDefault();
+		$.ajax({
+            type:'POST',
+			dataType: 'json',
+            url: base_url + 'client/logout',
+            success: function(result) {
+				console.log(result);
+				if (result) {
+					// navigate to home
+					location.href = '/home';
+				}
+            }
+        }); 	
+	});
 });
 
 // this function is to populate modal popup with customer info upon info icon click
