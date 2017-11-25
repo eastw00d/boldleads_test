@@ -48,11 +48,11 @@
 							<?php endif; ?>
 							<li>
 								<?php if (isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id'] == 0) : ?>
-									<a id='login' href="javascript:void(0);">
+									<a id='login'>
 										Login
 									</a>
 								<?php else: ?>
-									<a id='logout' href="javascript:void(0);">
+									<a id='logout'>
 										Logout
 									</a>
 								<?php endif; ?>
@@ -77,11 +77,11 @@
 							<?php endif; ?>
 							<li>
 								<?php if (isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id'] == 0) : ?>
-									<a id='login' href="javascript:void(0);">
+									<a id='login'>
 										Login
 									</a>
 								<?php else: ?>
-									<a id='logout' href="javascript:void(0);">
+									<a id='logout'>
 										Logout
 									</a>
 								<?php endif; ?>
@@ -159,7 +159,7 @@
 				<section class="copyright pb-60">
 					<div class="container">
 						<p class="footer">
-							&copy; <?=date("Y");?>&nbsp; <a><b>Test</b></a>
+							&copy; <?=date("Y");?>
 							<br />
 						</p>
 					</div>
