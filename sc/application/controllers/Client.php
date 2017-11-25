@@ -122,5 +122,8 @@ class Client extends Public_Controller {
 		session_unset();
 	    $_SESSION['user']['user_id'] = 0;
 	    $_SESSION['user']['user_name'] = 'Guest';
+		$result = TRUE;
+
+		echo json_encode($result);
 	}
 }
