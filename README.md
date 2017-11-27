@@ -27,3 +27,11 @@ must be pointed to public directory that I keep all the public accessed stuf in 
 3) you will need run queries from attached SQL file to create DB
 
 #This is all you need to set it up
+
+#PS : CodeIgniter is MVC framework
+sc/application/controllers - has controllers(php code that interacts with models(data) and views(front end)
+sc/application/models- has php that talks to DB
+sc/application/views - html templates that represent landing, dashboard, home, thanks pages
+
+sc/public/js//all.js - the main js file  that contains ajax calls to operate functionality and call Controllers
+sc/application/libraries/template.php  my templating library/engine  that operates templates  in views/templates and /views
