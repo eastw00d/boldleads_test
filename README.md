@@ -26,9 +26,9 @@ must be pointed to public directory that I keep all the public accessed stuf in 
 </script>
 3) you will need run queries from attached SQL file to create DB
 
-#This is all you need to set it up
+# This is all you need to set it up
 
-#PS : CodeIgniter is MVC framework
+# PS : CodeIgniter is MVC framework
 sc/application/controllers - has controllers(php code that interacts with models(data) and views(front end)
 sc/application/models- has php that talks to DB
 sc/application/views - html templates that represent landing, dashboard, home, thanks pages
